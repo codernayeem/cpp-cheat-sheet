@@ -1,6 +1,8 @@
 #include <iostream>
-#include <string> // imports more string's functions
+#include <string>   // imports more string's functions
 using namespace std;
+
+#define pi 3.1416   // defining global constant
 
 class Employee{
     public:
