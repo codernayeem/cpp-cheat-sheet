@@ -1,5 +1,7 @@
-#include <iostream>
-#include <string>   // imports more string's functions
+// #include <iostream>  // imports function like cin, cout
+// #include <string>   // imports more string's functions
+// #include <ctype.h>   // classifies and transforms characters
+#include <bits/stdc++.h>  // imports all headers file (good for cp, bad for compile)
 using namespace std;
 
 #define pi 3.1416   // defining global constant
@@ -172,6 +174,11 @@ int main(){
     // array
     int arr[3] = {5, 7, 3};
     cout << arr[1] << endl; // print 2 no. element : 7 (1 no. index)
+
+    // sorting array
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+    sort(arr, arr + arr_size);
+    printf("After Sorting : %d %d %d \n", arr[0], arr[1], arr[2]); // print 2 no. element : 7 (1 no. index)
     
     // 2D array
     int num[2][3] = {
@@ -181,6 +188,17 @@ int main(){
     cout << num[0][1] << endl; // print : 5
     
     
+    //char (may need ctype.h / cctype)
+    char ch1 = '4';
+    char ch2 = 'a';
+    char ch3 = 'A';
+    cout << ch1 << " -- is digit -> " << isdigit(ch1) << endl;
+    cout << ch2 << " -- is lower -> " << islower(ch2) << endl;
+    cout << ch2 << " -- Is upper -> " << isupper(ch2) << endl;
+    cout << ch3 << " -- to lower -> " << (char) tolower(ch3) << endl;
+    cout << ch2 << " -- to upper -> " << char(toupper(ch2)) << endl;
+
+
     // string
     string name = "Nayeem";
     cout << "My Name : " << name << endl;
