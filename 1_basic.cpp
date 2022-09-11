@@ -199,11 +199,19 @@ int main(){
     cout << ch2 << " -- to upper -> " << char(toupper(ch2)) << endl;
 
 
-    // string
+    // string 
     string name = "Nayeem";
     cout << "My Name : " << name << endl;
     cout << "Length : " << name.length() << endl; // Length : 6
     cout << "My Name : " << name.substr(1, 4) << endl; // aye
+    transform(name.begin(), name.end(), name.begin(), ::tolower); // tolower
+    cout << name << endl;
+    transform(name.begin(), name.end(), name.begin(), ::toupper); // toupper
+    cout << name << endl;
+    sort(name.begin(), name.end()); // sort
+    cout << name << endl;
+    sort(name.begin(), name.end(), greater<char>()); // inverse sort
+    cout << name << endl;
 
     // pointer
     int k = 75;
