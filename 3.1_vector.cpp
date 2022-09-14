@@ -21,7 +21,15 @@ template <class T>
 void display_with_iterator(vector<T> &v){
     // Iterators play rols like index
     for (vector<int>::iterator it = v.begin() ; it != v.end(); ++it)
-        cout << ' ' << *it;
+        cout << *it << ' ';
+    cout << endl;
+}
+
+template <class T>
+void display_auto(vector<T> &v){
+    // auto automatically define start & end
+    for (auto i: v)
+        cout << i << ' ';
     cout << endl;
 }
 
@@ -74,12 +82,12 @@ int main(){
     // Modifiers:
     vec1.push_back(57);                             // Add element at the end
     vec1.pop_back();                                // Delete last element
-    vec1.insert(vec1.begin()+2, 5);                 // Insert '5' at 3rd position
-    int myarray [] = { 501,502,503 };
-    vec1.insert (vec1.begin(), myarray, myarray+3); // Insert the array at begin
-    vec1.erase(vec1.begin()+2);                     // Erase the 3rd element
-    vec1.swap(vec2);                                // Swap content of vec1 and vec2
-    vec1.clear();                                   // Clear content (Delete all elements)
+    vec5.insert(vec5.begin()+2, 5);                 // Insert '5' at 3rd position
+    int myarray [] = {501, 502, 503};
+    vec5.insert(vec5.begin(), myarray, myarray+3);  // Insert the array at begin
+    vec5.erase(vec5.begin()+2);                     // Erase the 3rd element
+    vec3.swap(vec2);                                // Swap content of vec3 and vec2
+    vec3.clear();                                   // Clear content (Delete all elements)
 
 
     return 0;
